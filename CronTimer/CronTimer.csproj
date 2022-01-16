@@ -12,6 +12,7 @@
     <RepositoryUrl>https://github.com/sgbj/crontimer</RepositoryUrl>
     <PackageTags>cron;timer;periodic;background;worker;hosted;service;scheduled;task</PackageTags>
     <PackageId>Sgbj.Cron.CronTimer</PackageId>
+    <PackageLicenseFile>D:\source\repos\crontimer\LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
