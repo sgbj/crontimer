@@ -1,4 +1,4 @@
-# CronTimer
+# Sgbj.Cron.CronTimer
 Provides a cron timer similar to [`System.Threading.PeriodicTimer`](https://docs.microsoft.com/en-us/dotnet/api/system.threading.periodictimer?view=net-6.0) that enables waiting asynchronously for timer ticks.
 
 ## Usage
