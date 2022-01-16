@@ -36,6 +36,13 @@ public sealed class CronTimer : IDisposable
     {
     }
 
+    /// <summary>Initializes the timer with the given cron expression and <see cref="TimeZoneInfo.Utc"/> zone.</summary>
+    /// <param name="expression">The cron expression to use. Use <see cref="CronExpression.Parse(string, CronFormat)"/> for non-standard cron expressions.</param>
+    public CronTimer(CronExpression expression)
+        : this(expression, TimeZoneInfo.Utc)
+    {
+    }
+
     /// <summary>Initializes the timer with the given cron expression and time zone.</summary>
     /// <param name="expression">The cron expression to use. Use <see cref="CronExpression.Parse(string, CronFormat)"/> for non-standard cron expressions.</param>
     /// <param name="zone">The time zone to use.</param>
