@@ -18,8 +18,8 @@ public sealed class CronTimer : IDisposable
     private readonly CronExpression _expression;
     private readonly TimeZoneInfo _zone;
     private bool _canceled;
-    private readonly Timer? _timer;
-    private readonly State? _state;
+    private readonly Timer _timer;
+    private readonly State _state;
 
     /// <summary>Initializes the timer with the given cron expression and <see cref="TimeZoneInfo.Utc"/> zone.</summary>
     /// <param name="expression">The cron expression to use.</param>
