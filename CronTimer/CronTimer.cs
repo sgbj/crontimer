@@ -97,16 +97,19 @@ public sealed class CronTimer : IDisposable
     {
         GC.SuppressFinalize(this);
 
-        lock (_timer)
+        if (_timer != null)
         {
-            if (!_canceled)
+            lock (_timer)
             {
-                _canceled = true;
-                _timer.Dispose();
+                if (!_canceled)
+                {
+                    _canceled = true;
+                    _timer.Dispose();
+                }
             }
         }
 
-        _state.Signal(stopping: true);
+        _state?.Signal(stopping: true);
     }
 
     ~CronTimer() => Dispose();
